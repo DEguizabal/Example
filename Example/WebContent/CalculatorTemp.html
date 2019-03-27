@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Celcius a Fahrenheit</h2>
+
+<p>Inserte un numero en uno de los campos de abajo:</p>
+
+<p><input id="c" onkeyup="convert('C')"> grados Celsius</p>
+
+<p><input id="f" onkeyup="convert('F')"> grados Fahrenheit</p> 
+
+<script>
+function convert(degree) {
+  var x;
+  if (degree == "C") {
+    x = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("f").value = x.toFixed(2);
+  } else {
+    x = (document.getElementById("f").value -32) * 5 / 9;
+    document.getElementById("c").value = x.toFixed(2);
+  }
+}
+</script>
+</body>
+</html>
